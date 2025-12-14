@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: chickenbites-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python start.py
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: DB_HOST
+        value: srv2049.hstgr.io
+      - key: DB_NAME
+        value: u761984878_csc4
+      - key: DB_USER
+        value: u761984878_csc4
+      - key: DB_PASSWORD
+        value: Azraelcisco123!
+    healthCheckPath: /api/health
+
